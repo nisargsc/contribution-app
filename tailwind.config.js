@@ -6,8 +6,9 @@ module.exports = {
     theme: {
         extend: {
             gridTemplateColumns: {
-                'home-3': '150px auto 150px',
-                'home-1': '0px auto 0px',
+                'home-lg': '150px auto 150px',
+                'home-md': '50px auto 50px',
+                'home-sm': '0px auto 0px',
             }
         },
     },

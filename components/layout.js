@@ -1,6 +1,6 @@
 const Layout = ({children}) => {
     return (
-        <div className="grid grid-cols-home-1 sm:grid-cols-home-3 bg-cyan-400 h-full">
+        <div className="grid grid-cols-home-sm sm:grid-cols-home-md md:grid-cols-home-lg min-h-screen bg-cyan-400">
             <div className=""></div>
             <div className="content">
                 {children}

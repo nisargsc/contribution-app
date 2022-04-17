@@ -1,6 +1,8 @@
 const FullpageCard = ({children}) => {
     return (
-        <div className="fullpage-card"></div>
+        <div className="fullpage-card">
+            {children}
+        </div>
         )
     }
     

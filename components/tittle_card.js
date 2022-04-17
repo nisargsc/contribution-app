@@ -1,6 +1,8 @@
 const TittleCard = ({children}) => {
     return (
-        <div className="tittle-card"></div>
+        <div className="tittle-card">
+            {children}
+        </div>
         )
     }
     
