@@ -8,7 +8,7 @@
 }
 
 .tittle-card {
-    @apply card min-h-[50vh] border-4 border-black border-t-0 border-l-0;
+    @apply card border-4 border-black border-t-0 border-l-0;
 }
 
 .fund-card {
