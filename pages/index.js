@@ -7,33 +7,13 @@ export default function Home() {
         <>
             <TittleCard />
             <div className="grid grid-cols-1 lg:grid-cols-2">
-                <FundCard>
-                    <Link href="funds/1"><a><button className="button">fullpageCard</button></a></Link>
-                </FundCard>
-
-                <FundCard>
-                    <Link href="funds/2"><a><button className="button">fullpageCard</button></a></Link>
-                </FundCard>
-
-                <FundCard>
-                    <Link href="funds/3"><a><button className="button">fullpageCard</button></a></Link>
-                </FundCard>
-
-                <FundCard>
-                    <Link href="funds/4"><a><button className="button">fullpageCard</button></a></Link>
-                </FundCard>
-
-                <FundCard>
-                    <Link href="funds/5"><a><button className="button">fullpageCard</button></a></Link>
-                </FundCard>
-
-                <FundCard>
-                    <Link href="funds/6"><a><button className="button">fullpageCard</button></a></Link>
-                </FundCard>
-
-                <FundCard>
-                    <Link href="funds/7"><a><button className="button">fullpageCard</button></a></Link>
-                </FundCard>
+                <FundCard />
+                <FundCard />
+                <FundCard />
+                <FundCard />
+                <FundCard />
+                <FundCard />
+                <FundCard />
             </div>
         </>
     )          
