@@ -1,11 +1,12 @@
+import Layout from '../components/layout'
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
-  return (
-    <div className='bg-cyan-400 h-full'>
-      <Component {...pageProps} />
-    </div>
-  )
-}
-
+    return (
+        <Layout>
+            <Component {...pageProps} />
+        </Layout>
+        )
+    }
+    
 export default MyApp
