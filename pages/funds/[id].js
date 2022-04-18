@@ -1,5 +1,5 @@
 import Link from "next/link";
-import DonationCard from "../../components/donation_card";
+import Donation from "../../components/donation";
 import FullpageCard from "../../components/fullpage_card";
 
 export default function FundDetails() {
@@ -22,18 +22,18 @@ export default function FundDetails() {
 
                 <div className="m-responsive flex flex-col lg:flex-row border border-gray-300 bg-gray-100 rounded-md shadow-sm">
                     <input type="number" placeholder="Amount" className="input flex-1"></input>
-                    <input type="password" placeholder="PAN Number" className="input flex-1"></input>
+                    <input type="password" placeholder="PAN number" className="input flex-1"></input>
                     <button className="button w-fit"> <a> Donate </a></button>
                 </div>
                 
                 <span className="m-2 text-xl text-center font-medium"> Previous Donations </span>
-                <div className="flex flex-col-reverse max-h-60 overflow-y-auto m-responsive border border-gray-300 bg-gray-100 rounded-md shadow-sm">
-                    <DonationCard i="1" />
-                    <DonationCard i="2"/>
-                    <DonationCard i="3"/>
-                    <DonationCard i="4"/>
-                    <DonationCard i="5"/>
-                    <DonationCard i="6"/>
+                <div className="flex flex-col-reverse min-h-[4rem] max-h-60 overflow-y-auto m-responsive border border-gray-300 bg-gray-100 rounded-md shadow-sm">
+                    <Donation i="1" />
+                    <Donation i="2"/>
+                    <Donation i="3"/>
+                    <Donation i="4"/>
+                    <Donation i="5"/>
+                    <Donation i="6"/>
                 </div>
             </div>
         </FullpageCard>

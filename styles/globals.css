@@ -11,6 +11,10 @@
     @apply card border-4 border-black border-t-0 border-l-0;
 }
 
+.newfundform-card {
+    @apply m-2 bg-gray-100 shadow-md rounded-md border-4 border-black border-t-0 border-l-0
+}
+
 .fund-card {
     @apply card border-4 border-white hover:border-black border-t-0 border-l-0;
 }
@@ -24,9 +28,14 @@
         rounded-md shadow-sm transition ease-in-out hover:scale-105;
 }
 
+.button-without-scale {
+    @apply m-2 p-2 bg-teal-400 hover:bg-teal-100  border border-black
+        rounded-md shadow-sm transition ease-in-out;
+}
+
 .input {
     @apply m-2 p-2 font-light rounded-md border border-black focus:outline-none
-        focus:placeholder-gray-300 text-gray-500 placeholder-gray-500;
+        focus:placeholder-gray-300 placeholder-gray-500;
 }
 
 .m-responsive {
