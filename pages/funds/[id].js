@@ -1,4 +1,5 @@
 import Link from "next/link";
+import DonationCard from "../../components/donation_card";
 import FullpageCard from "../../components/fullpage_card";
 
 export default function FundDetails() {
@@ -10,8 +11,9 @@ export default function FundDetails() {
                 </button></Link>
 
                 <span className="m-2 mb-4 text-3xl text-center font-medium"> Tittle of the Fund </span>
+
                 <p className="m-responsive text-justify">
-                    Description of the fund.... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    Description of the fund...... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                     exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
                     reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
@@ -24,6 +26,15 @@ export default function FundDetails() {
                     <button className="button w-fit"> <a> Donate </a></button>
                 </div>
                 
+                <span className="m-2 text-xl text-center font-medium"> Previous Donations </span>
+                <div className="flex flex-col-reverse max-h-60 overflow-y-auto m-responsive border border-gray-300 bg-gray-100 rounded-md shadow-sm">
+                    <DonationCard i="1" />
+                    <DonationCard i="2"/>
+                    <DonationCard i="3"/>
+                    <DonationCard i="4"/>
+                    <DonationCard i="5"/>
+                    <DonationCard i="6"/>
+                </div>
             </div>
         </FullpageCard>
     )          
@@ -34,6 +45,6 @@ const back_svg = <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xml
                     7H12.5C12.7761 7 13 7.22386 13 7.5C13 7.77614 12.7761 8 12.5 8H3.70711L6.85355 11.1464C7.04882 
                     11.3417 7.04882 11.6583 6.85355 11.8536C6.65829 12.0488 6.34171 12.0488 6.14645 11.8536L2.14645 
                     7.85355C1.95118 7.65829 1.95118 7.34171 2.14645 7.14645L6.14645 3.14645C6.34171 2.95118 6.65829 
-                    2.95118 6.85355 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
+                    2.95118 6.85355 3.14645Z" fill="black">
                     </path>
                 </svg>
