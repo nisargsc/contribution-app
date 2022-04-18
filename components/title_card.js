@@ -1,6 +1,6 @@
-const TittleCard = () => {
+const TitleCard = () => {
     return (
-        <div className="tittle-card flex items-center flex-col">
+        <div className="title-card flex items-center flex-col">
             <p className="m-4 text-center text-3xl">
                 <span>This is anonymous contributions application.</span>
             </p>
@@ -19,4 +19,4 @@ const TittleCard = () => {
         )
     }
     
-export default TittleCard;
+export default TitleCard;

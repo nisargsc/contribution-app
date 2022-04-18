@@ -10,7 +10,7 @@ export default function FundDetails() {
                     <a className="flex items-center"> { back_svg } <span className="ml-1"> back </span> </a>
                 </button></Link>
 
-                <span className="m-2 mb-4 text-3xl text-center font-medium"> Tittle of the Fund </span>
+                <span className="m-2 mb-4 text-3xl text-center font-medium"> Title of the Fund </span>
 
                 <p className="m-responsive text-justify">
                     Description of the fund...... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

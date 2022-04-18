@@ -7,7 +7,7 @@
     @apply m-2 bg-white shadow-md rounded-md;
 }
 
-.tittle-card {
+.title-card {
     @apply card border-4 border-black border-t-0 border-l-0;
 }
 
