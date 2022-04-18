@@ -27,14 +27,14 @@ export default function FundDetails() {
                 </div>
                 
                 <span className="m-2 text-xl text-center font-medium"> Previous Donations </span>
-                <div className="flex flex-col-reverse min-h-[4rem] max-h-60 overflow-y-auto m-responsive border border-gray-300 bg-gray-100 rounded-md shadow-sm">
+                <ul className="flex flex-col-reverse min-h-[4rem] max-h-60 overflow-y-auto m-responsive border border-gray-300 bg-gray-100 rounded-md shadow-sm">
                     <Donation i="1" />
                     <Donation i="2"/>
                     <Donation i="3"/>
                     <Donation i="4"/>
                     <Donation i="5"/>
                     <Donation i="6"/>
-                </div>
+                </ul>
             </div>
         </FullpageCard>
     )          
