@@ -2,7 +2,7 @@ const TitleCard = () => {
     return (
         <div className="title-card flex items-center flex-col">
             <p className="m-4 text-center text-3xl">
-                <span>This is anonymous contributions application.</span>
+                <span>Anonymous Contributions Application</span>
             </p>
             <p className="m-2 text-center text-xl">
                 <span>
