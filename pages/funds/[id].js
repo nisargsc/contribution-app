@@ -7,7 +7,7 @@ export default function FundDetails() {
         <FullpageCard>
             <div className="flex flex-col">
                 <Link href="/"><button className="button w-fit">
-                    <a className="flex items-center"> { back_svg } <span className="ml-1"> back </span> </a>
+                    <a className="flex items-center"> { back_svg } <span> back </span> </a>
                 </button></Link>
 
                 <span className="m-2 mb-4 text-3xl text-center font-medium"> Title of the Fund </span>
@@ -40,7 +40,7 @@ export default function FundDetails() {
     )          
 }
 
-const back_svg = <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+const back_svg = <svg className="m-1" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.85355 3.14645C7.04882 3.34171 7.04882 3.65829 6.85355 3.85355L3.70711
                     7H12.5C12.7761 7 13 7.22386 13 7.5C13 7.77614 12.7761 8 12.5 8H3.70711L6.85355 11.1464C7.04882 
                     11.3417 7.04882 11.6583 6.85355 11.8536C6.65829 12.0488 6.34171 12.0488 6.14645 11.8536L2.14645 

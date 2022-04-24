@@ -1,13 +1,13 @@
 const Layout = ({children}) => {
     return (
-        <div className="grid grid-cols-home-sm sm:grid-cols-home-md md:grid-cols-home-lg min-h-screen bg-cyan-400">
+        <div className="grid grid-cols-home-sm sm:grid-cols-home-md md:grid-cols-home-lg min-h-screen bg-gradient-to-tr from-green-300 via-blue-500 to-purple-600">
             <div className=""></div>
             <div className="content">
                 {children}
             </div>
             <div className="flex flex-col items-end">
                 <div className="flex justify-end m-2">
-                    <a href="https://github.com/nisargsc/contribution-app" className="rounded-full hover:bg-cyan-300">
+                    <a href="https://github.com/nisargsc/contribution-app">
                         {github_logo}
                     </a>
                 </div>
@@ -18,7 +18,9 @@ const Layout = ({children}) => {
     
 export default Layout;
 
-const github_logo = <svg width="25" height="25" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+const github_logo = <svg className="w-6 h-6 transition ease-in-out hover:scale-110
+                    rounded-full hover:bg-purple-500 fill-gray-800 hover:fill-black"
+                    viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7.49933 0.25C3.49635 0.25 0.25 3.49593 0.25 7.50024C0.25
                         10.703 2.32715 13.4206 5.2081 14.3797C5.57084 14.446 5.70302 14.2222
                         5.70302 14.0299C5.70302 13.8576 5.69679 13.4019 5.69323 12.797C3.67661
@@ -35,6 +37,6 @@ const github_logo = <svg width="25" height="25" viewBox="0 0 15 15" fill="none" 
                         9.9063 10.4292 10.5192 8.81452 10.6985C9.07444 10.9224 9.30633 11.3648
                         9.30633 12.0413C9.30633 13.0102 9.29742 13.7922 9.29742 14.0299C9.29742
                         14.2239 9.42828 14.4496 9.79591 14.3788C12.6746 13.4179 14.75 10.7025 14.75 7.50024C14.75
-                        3.49593 11.5036 0.25 7.49933 0.25Z" fill="black">
+                        3.49593 11.5036 0.25 7.49933 0.25Z">
                         </path>
                     </svg>
