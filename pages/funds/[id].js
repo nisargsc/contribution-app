@@ -20,14 +20,14 @@ export default function FundDetails() {
                     occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
 
-                <div className="m-responsive flex flex-col lg:flex-row border border-gray-300 bg-gray-100 rounded-md shadow-sm">
+                <div className="m-responsive w-fit self-center flex flex-col items-center bg-gray-100 bg-opacity-20 rounded-md shadow-md">
                     <input type="number" placeholder="Amount" className="input flex-1"></input>
                     <input type="password" placeholder="PAN number" className="input flex-1"></input>
                     <button className="button w-fit"> <a> Donate </a></button>
                 </div>
                 
                 <span className="m-2 text-xl text-center font-medium"> Previous Donations </span>
-                <ul className="flex flex-col-reverse min-h-[4rem] max-h-60 overflow-y-auto m-responsive border border-gray-300 bg-gray-100 rounded-md shadow-sm">
+                <ul className="p-2 flex flex-col-reverse min-h-[4rem] max-h-60 overflow-y-auto m-responsive bg-gray-100 bg-opacity-20 rounded-md shadow-md">
                     <Donation i="1" />
                     <Donation i="2"/>
                     <Donation i="3"/>

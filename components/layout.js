@@ -1,6 +1,6 @@
 const Layout = ({children}) => {
     return (
-        <div className="grid grid-cols-home-sm sm:grid-cols-home-md md:grid-cols-home-lg min-h-screen bg-gradient-to-tr from-green-300 via-blue-500 to-purple-600">
+        <div className="grid grid-cols-home-sm sm:grid-cols-home-md md:grid-cols-home-lg min-h-screen bg-gradient-to-br from-orange-200 via-emerald-500 to-fuchsia-900">
             <div className=""></div>
             <div className="content">
                 {children}
@@ -19,7 +19,7 @@ const Layout = ({children}) => {
 export default Layout;
 
 const github_logo = <svg className="w-6 h-6 transition ease-in-out hover:scale-110
-                    rounded-full hover:bg-purple-500 fill-gray-800 hover:fill-black"
+                    rounded-full hover:bg-emerald-400 fill-gray-900 hover:fill-black"
                     viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7.49933 0.25C3.49635 0.25 0.25 3.49593 0.25 7.50024C0.25
                         10.703 2.32715 13.4206 5.2081 14.3797C5.57084 14.446 5.70302 14.2222

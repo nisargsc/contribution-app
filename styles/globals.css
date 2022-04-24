@@ -4,28 +4,24 @@
 
 
 .card {
-    @apply m-2 bg-white shadow-md rounded-md;
+    @apply m-2 bg-white shadow-lg rounded-md bg-opacity-80;
 }
 
 .title-card {
-    @apply card border-4 border-black border-t-0 border-l-0;
-}
-
-.newfundform-card {
-    @apply m-2 bg-gray-100 shadow-md rounded-md border-4 border-black border-t-0 border-l-0
+    @apply card min-h-fit;
 }
 
 .fund-card {
-    @apply card border-4 border-white hover:border-black border-t-0 border-l-0;
+    @apply card border-4 hover:border-gray-900 border-t-0 border-l-0 border-transparent;
 }
 
 .fullpage-card {
-    @apply card min-h-[97vh] border-4 border-black border-t-0 border-l-0;
+    @apply card min-h-[97vh];
 }
 
 .button {
-    @apply m-2 p-2 bg-teal-400 hover:bg-teal-100  border border-black
-        rounded-md shadow-sm transition ease-in-out hover:scale-105;
+    @apply m-2 p-2 bg-blue-300 hover:bg-blue-400  border border-black
+        rounded-full shadow-lg transition ease-in-out hover:scale-105;
 }
 
 .input {
