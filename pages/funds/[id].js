@@ -2,7 +2,7 @@ import Link from "next/link";
 import Donation from "../../components/donation";
 import FullpageCard from "../../components/fullpage_card";
 
-export default function FundDetails() {
+export default function FundDetails({ fund }) {
     return (
         <FullpageCard>
             <div className="flex flex-col">
@@ -10,14 +10,10 @@ export default function FundDetails() {
                     <a className="flex items-center"> { back_svg } <span> back </span> </a>
                 </button></Link>
 
-                <span className="m-2 mb-4 text-3xl text-center font-medium"> Title of the Fund </span>
+                <span className="m-2 mb-4 text-3xl text-center font-medium"> {fund.title} </span>
 
                 <p className="m-responsive text-justify">
-                    Description of the fund...... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    {fund.description}
                 </p>
 
                 <div className="m-responsive w-fit self-center flex flex-col items-center bg-gray-100 bg-opacity-20 rounded-md shadow-md">
@@ -28,18 +24,41 @@ export default function FundDetails() {
                 
                 <span className="m-2 text-xl text-center font-medium"> Previous Donations </span>
                 <ul className="p-2 flex flex-col-reverse min-h-[4rem] max-h-60 overflow-y-auto m-responsive bg-gray-100 bg-opacity-20 rounded-md shadow-md">
-                    <Donation i="1" />
-                    <Donation i="2"/>
-                    <Donation i="3"/>
-                    <Donation i="4"/>
-                    <Donation i="5"/>
-                    <Donation i="6"/>
+                    { fund.donations.map((donation) => <Donation donation={donation} /> ) }
                 </ul>
             </div>
         </FullpageCard>
     )          
 }
 
+export async function getStaticProps(context) {
+    const id = context.params.id;
+    const res = await fetch('http://127.0.0.1:5000/funds?' + new URLSearchParams({
+        id: id
+    }))
+    const {fund} = await res.json()
+    // console.log(fund_id_list)
+    // console.log(state)
+
+    return {
+      props: {
+        fund
+      },
+    }
+}
+
+export async function getStaticPaths() {
+    const res = await fetch('http://127.0.0.1:5000/chain/state')
+    const {state} = await res.json()
+    const {fund_id_list} = state
+
+    const paths = fund_id_list.map(fund_id =>  { return { params : { id : fund_id } } })
+
+    return {
+      paths,
+      fallback: false
+    };
+  }
 const back_svg = <svg className="m-1" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.85355 3.14645C7.04882 3.34171 7.04882 3.65829 6.85355 3.85355L3.70711
                     7H12.5C12.7761 7 13 7.22386 13 7.5C13 7.77614 12.7761 8 12.5 8H3.70711L6.85355 11.1464C7.04882 
