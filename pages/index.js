@@ -2,7 +2,7 @@ import FundCard from "../components/fund_card";
 import NewFundFormCard from "../components/newfundform_card";
 import TitleCard from "../components/title_card";
 
-export default function Home({ state, funds, fund_id_list }) {
+export default function Home({ funds, fund_id_list }) {
     return (
         <>
             <TitleCard />

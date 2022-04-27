@@ -1,5 +1,6 @@
 import React from 'react';
 import Router from 'next/router'
+import zkp from '../utils/zkp';
 
 const NewFundFormCard = () => {
     
@@ -16,10 +17,8 @@ const NewFundFormCard = () => {
                 <div className="flex justify-center">
                     <button className="button font-medium" onClick={
                         () => {
+                            zkp(panRef.current.value)
                             updateState(titleRef.current.value, descRef.current.value)
-                            titleRef.current.value="";
-                            descRef.current.value="";
-                            panRef.current.value=""
                         }}> 
                         <a> Create New Fund </a>
                     </button>

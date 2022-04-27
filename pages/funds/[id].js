@@ -3,6 +3,7 @@ import Donation from "../../components/donation";
 import FullpageCard from "../../components/fullpage_card";
 import React from 'react';
 import Router from 'next/router'
+import zkp from "../../utils/zkp";
 
 export default function FundDetails({ fund, fund_id }) {
     
@@ -27,9 +28,8 @@ export default function FundDetails({ fund, fund_id }) {
                     <input ref={panRef} type="password" placeholder="PAN number" className="input flex-1"></input>
                     <button className="button w-fit"onClick={
                         () => {
+                            // zkp(panRef.current.value)
                             updateState(amountRef.current.value, fund_id)
-                            amountRef.current.value="";
-                            panRef.current.value=""
                         }}> 
                         <a> Donate </a>
                     </button>
@@ -61,7 +61,7 @@ async function updateState(amount, fund_id){
         },
         body: body})
         // console.log(res.url)
-        const {state} = await res.json()
+        // const {state} = await res.json()
         // console.log(state)
         Router.reload(window.location.pathname)
     }catch(e){
